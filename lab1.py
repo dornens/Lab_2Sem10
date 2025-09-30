@@ -1,19 +1,17 @@
 # ==============================
 # Laboratorio 2 – Segundo Cómputo
-# Semana 10 – Pandas
+# Semana 10 – Pandas (Top 500 Songs)
 # ==============================
 
-# Importar librerías necesarias
 import pandas as pd
 import numpy as np
 
-# 1. Cargar dataset descargado de Kaggle (ejemplo: dataset de ventas)
-# Cambiar "dataset.csv" por el archivo que elegiste
-df = pd.read_csv("Top_500_Songs.csv", encoding="latin-1")
+# 1. Cargar dataset con la codificación correcta
+df = pd.read_csv("Top 500 Songs.csv", encoding="latin1")
 
-# 2. Resumen estadístico del dataset
+# 2. Resumen estadístico (solo aplica a columnas numéricas, aquí pocas son numéricas)
 print("=== Resumen estadístico con describe() ===")
-print(df.describe())
+print(df.describe(include="all"))
 
 # 3. Identificar tipos de datos
 print("\n=== Tipos de datos (dtypes) ===")
@@ -25,18 +23,19 @@ print(df.head())
 print("\n=== Últimos registros (tail) ===")
 print(df.tail())
 
-# 5. Ordenar resultados por una columna (ejemplo: ventas)
-print("\n=== Datos ordenados por columna 'ventas' de forma descendente ===")
-print(df.sort_values(by="ventas", ascending=False).head(10))
+# 5. Ordenar resultados por semanas en lista (columna 'streak')
+# Nota: hay que limpiar la columna porque es texto como "12 weeks"
+df["weeks_on_chart"] = df["streak"].str.extract(r"(\d+)").astype(float)
 
-# 6. Medidas estadísticas sobre una columna (ejemplo: 'ventas')
-columna = "ventas"
+print("\n=== Canciones con mayor tiempo en lista ===")
+print(df.sort_values(by="weeks_on_chart", ascending=False)[["title","artist","weeks_on_chart"]].head(10))
 
-media = np.mean(df[columna])
-mediana = np.median(df[columna])
-desviacion = np.std(df[columna])
+# 6. Medidas estadísticas sobre semanas en lista
+media = np.mean(df["weeks_on_chart"])
+mediana = np.median(df["weeks_on_chart"])
+desviacion = np.std(df["weeks_on_chart"])
 
-print(f"\n=== Medidas estadísticas de la columna '{columna}' ===")
+print("\n=== Medidas estadísticas de la columna 'weeks_on_chart' ===")
 print(f"Media: {media}")
 print(f"Mediana: {mediana}")
 print(f"Desviación estándar: {desviacion}")
