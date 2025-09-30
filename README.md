@@ -2,8 +2,8 @@
 **Semana 10 – Análisis de datos con Pandas**  
 
 ## Colaboradores  
-- Franklin Aldahir Portillo Flores  
-- Juan Ramon Espinal Cotoy  
+- Franklin Aldahir Portillo Flores SMSS011624
+- Juan Ramon Espinal Coto SMSS102323  
 
 ---
 
