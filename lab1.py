@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 
 # 1. Cargar dataset con la codificación correcta
-df = pd.read_csv("Top 500 Songs.csv", encoding="latin1")
+df = pd.read_csv("Top_500_Songs.csv", encoding="latin1")
 
 # 2. Resumen estadístico (solo aplica a columnas numéricas, aquí pocas son numéricas)
 print("=== Resumen estadístico con describe() ===")
