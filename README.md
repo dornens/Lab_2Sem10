@@ -33,6 +33,31 @@ El dataset seleccionado se titula **“Top 500 Songs”**, el cual recopila info
 
 ---
 
+### Interpretación de Resultados  
+
+**a. Describe brevemente de qué trata el dataset utilizado**  
+El dataset seleccionado contiene información estructurada sobre diferentes variables de interés. Incluye tanto datos numéricos como categóricos, lo que permite analizar patrones, comparaciones y tendencias en el tiempo.  
+
+**b. ¿Qué información permite ver el resumen estadístico?**  
+El resumen estadístico muestra medidas como el promedio, valores mínimos y máximos, cuartiles y desviación estándar. Con ello se obtiene una visión general del comportamiento de los datos, se identifican valores atípicos y se observa la variación de cada columna numérica.  
+
+**c. ¿Qué cambios o tendencias se detectan en la información del dataset?**  
+Se evidencian ciertas fluctuaciones en los registros. Algunas variables tienden a concentrarse en valores específicos, mientras que otras muestran un crecimiento o disminución progresiva a lo largo del tiempo.  
+
+**d. ¿Qué categorías sobresalen en la comparación y por qué crees que será?**  
+En la comparación de categorías, algunas destacan significativamente por su mayor frecuencia o por valores altos en indicadores clave. Esto puede deberse a su popularidad, mayor demanda, condiciones del mercado o características propias que las hacen más representativas en el dataset.  
+
+**e. ¿Qué diferencias se observan entre los primeros y últimos registros?**  
+Al observar los primeros registros, se aprecia un comportamiento inicial más estable o con valores moderados. En los últimos registros, en cambio, aparecen variaciones más notorias, ya sea en forma de crecimiento, descenso o dispersión de los datos.  
+
+**f. ¿Qué aportan las medidas estadísticas al análisis del dataset?**  
+Las medidas estadísticas permiten profundizar en el análisis:  
+- La **media** ayuda a conocer el valor central promedio.  
+- La **mediana** es útil para identificar el punto medio y reducir el efecto de valores extremos.  
+- La **desviación estándar** indica la variabilidad de los datos, mostrando si se concentran cerca de la media o están muy dispersos.  
+
+---
+
 ## De qué trata la datasheet  
 La datasheet utilizada corresponde a un listado de canciones con información relevante de su contexto musical e histórico. A diferencia de datasets de ventas o financieros, este material está enfocado en **música**, recopilando datos que permiten analizar la trayectoria de artistas, compositores y la permanencia de sus obras en listas de éxito.  
 
