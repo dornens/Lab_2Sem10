@@ -6,31 +6,31 @@
 import pandas as pd
 import numpy as np
 
-# 1. Cargar dataset con la codificación correcta
+# Cargamos la dataset con la codificación correcta que es latin1 ya que da error sin ella
 df = pd.read_csv("Top_500_Songs.csv", encoding="latin1")
 
-# 2. Resumen estadístico (solo aplica a columnas numéricas, aquí pocas son numéricas)
+#Resumen estadístico (solo aplica a columnas numéricas, aquí pocas son numéricas)
 print("=== Resumen estadístico con describe() ===")
 print(df.describe(include="all"))
 
-# 3. Identificar tipos de datos
+#Identificacion tipos de datos
 print("\n=== Tipos de datos (dtypes) ===")
 print(df.dtypes)
 
-# 4. Mostrar primeros y últimos registros
+#Mostrar primeros y últimos registros
 print("\n=== Primeros registros (head) ===")
 print(df.head())
 print("\n=== Últimos registros (tail) ===")
 print(df.tail())
 
-# 5. Ordenar resultados por semanas en lista (columna 'streak')
+#Ordenar resultados por semanas en lista (columna 'streak')
 # Nota: hay que limpiar la columna porque es texto como "12 weeks"
 df["weeks_on_chart"] = df["streak"].str.extract(r"(\d+)").astype(float)
 
 print("\n=== Canciones con mayor tiempo en lista ===")
 print(df.sort_values(by="weeks_on_chart", ascending=False)[["title","artist","weeks_on_chart"]].head(10))
 
-# 6. Medidas estadísticas sobre semanas en lista
+#Medidas estadísticas sobre semanas en lista
 media = np.mean(df["weeks_on_chart"])
 mediana = np.median(df["weeks_on_chart"])
 desviacion = np.std(df["weeks_on_chart"])
