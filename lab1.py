@@ -9,7 +9,7 @@ import numpy as np
 
 # 1. Cargar dataset descargado de Kaggle (ejemplo: dataset de ventas)
 # Cambiar "dataset.csv" por el archivo que elegiste
-df = pd.read_csv("Top_500_Songs.csv")
+df = pd.read_csv("Top_500_Songs.csv", encoding="latin-1")
 
 # 2. Resumen estadístico del dataset
 print("=== Resumen estadístico con describe() ===")
